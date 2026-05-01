@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConsultHub — Booking Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-text">ConsultHub</div>
+      <div class="logo-sub">Booking Platform</div>
+    </div>
+
+    <div class="role-switcher">
+      <button class="role-btn active" onclick="switchRole('client')" id="role-client">Client</button>
+      <button class="role-btn" onclick="switchRole('consultant')" id="role-consultant">Consult</button>
+      <button class="role-btn" onclick="switchRole('admin')" id="role-admin">Admin</button>
+    </div>
+
+    <div class="sidebar-nav" id="sidebar-nav"></div>
+
+    <div class="sidebar-footer">
+      <div class="user-chip">
+        <div class="user-avatar" id="user-avatar">AC</div>
+        <div>
+          <div class="user-name" id="user-name">Alex Chen</div>
+          <div class="user-role" id="user-role">client · cl001</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content area -->
+  <div class="main">
+    <div class="topbar">
+      <div class="topbar-title" id="topbar-title">Dashboard <span>/ Overview</span></div>
+    </div>
+    <div class="content" id="main-content"></div>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title"></div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer" id="modal-footer"></div>
+  </div>
+</div>
+
+<!-- Toast notifications -->
+<div class="toast-container" id="toast-container"></div>
+
+<!-- Loading overlay -->
+<div class="loading-overlay" id="loading-overlay">
+  <div class="spinner" style="width:30px;height:30px;border-color:rgba(192,57,43,0.3);border-top-color:#c0392b"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
